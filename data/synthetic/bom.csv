@@ -1,0 +1,13 @@
+product,material_id,quantity_per_unit
+Staples,MAT001,0.03
+Staples,MAT002,0.031
+Staples,MAT003,0.056
+Staples,MAT004,0.049
+Scissors,MAT005,0.065
+Scissors,MAT006,0.057
+Scissors,MAT007,0.038
+Scissors,MAT008,0.067
+Knives,MAT009,0.022
+Knives,MAT010,0.012
+Knives,MAT011,0.016
+Knives,MAT012,0.061

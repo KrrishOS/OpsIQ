@@ -1,0 +1,11 @@
+machine_id,machine_name,machine_type,capacity_per_hour,operating_cost_per_hour,efficiency_factor
+M01,Machine 1,Press,142,550,0.94
+M02,Machine 2,Assembly,179,485,0.92
+M03,Machine 3,Cutting,159,391,0.76
+M04,Machine 4,Cutting,161,764,0.96
+M05,Machine 5,Cutting,158,691,0.9
+M06,Machine 6,Assembly,163,622,0.93
+M07,Machine 7,Press,141,501,0.84
+M08,Machine 8,Assembly,110,712,0.95
+M09,Machine 9,Press,168,573,0.91
+M10,Machine 10,Press,136,522,0.97
