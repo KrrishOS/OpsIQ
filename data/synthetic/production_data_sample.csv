@@ -1,0 +1,11 @@
+order_id,machine_id,product,planned_qty,actual_qty,defective_qty,downtime_min,date
+O001,M01,Staples,500,470,12,30,2026-10-01
+O002,M02,Scissors,400,390,8,15,2026-10-01
+O003,M03,Knives,600,480,25,90,2026-10-01
+O004,M01,Staples,550,530,10,20,2026-10-02
+O005,M02,Scissors,450,420,15,40,2026-10-02
+O006,M03,Knives,600,510,18,65,2026-10-02
+O007,M01,Staples,500,490,5,10,2026-10-03
+O008,M02,Scissors,400,360,20,55,2026-10-03
+O009,M03,Knives,650,500,30,100,2026-10-03
+O010,M01,Staples,550,540,7,15,2026-10-04
