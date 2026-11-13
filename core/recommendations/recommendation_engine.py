@@ -21,6 +21,10 @@ from core.recommendations.confidence_assessor import (
     assess_recommendation_confidence,
 )
 
+from core.recommendations.priority_assessor import (
+    assess_recommendation_priority,
+)
+
 
 SEVERITY_RANK = {
     "low": 1,
@@ -77,8 +81,7 @@ def generate_recommendations(evidence_records: list[dict]) -> list[dict]:
         if template is None:
             continue
 
-        # Include the recommendation title in the key.
-        # Different downtime categories must remain separate.
+        # Different downtime categories must remain separate
         recommendation_key = (
             template["rule_id"],
             template["title"],
@@ -121,12 +124,12 @@ def generate_recommendations(evidence_records: list[dict]) -> list[dict]:
             if source not in recommendation["source_diagnostics"]:
                 recommendation["source_diagnostics"].append(source)
 
-
     # Convert grouped recommendations into a list
     final_recommendations = list(recommendations.values())
 
-    # Attach confidence assessment to every recommendation
+    # Attach confidence and priority assessments
     for recommendation in final_recommendations:
+
         confidence = assess_recommendation_confidence(
             recommendation=recommendation,
             evidence_records=evidence_records,
@@ -134,5 +137,11 @@ def generate_recommendations(evidence_records: list[dict]) -> list[dict]:
 
         recommendation["confidence_assessment"] = confidence
 
-    return final_recommendations
+        priority = assess_recommendation_priority(
+            recommendation=recommendation,
+            evidence_records=evidence_records,
+        )
 
+        recommendation["priority_assessment"] = priority
+
+    return final_recommendations
